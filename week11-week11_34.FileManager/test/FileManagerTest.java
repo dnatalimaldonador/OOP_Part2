@@ -13,7 +13,7 @@ public class FileManagerTest {
 
     @Points("34.1")
     @Test
-    public void readsLines1() throws FileNotFoundException {
+    public void readsLines1() throws FileNotFoundException, IOException {
         ArrayList<String> tekstit = new ArrayList<String>();
         tekstit.add("eka");
         tekstit.add("toka");
@@ -22,7 +22,7 @@ public class FileManagerTest {
 
     @Points("34.1")
     @Test
-    public void readsLines2() throws FileNotFoundException {
+    public void readsLines2() throws FileNotFoundException, IOException {
         ArrayList<String> tekstit = new ArrayList<String>();
         tekstit.add("yy");
         tekstit.add("kaa");
@@ -130,7 +130,7 @@ public class FileManagerTest {
                 + k, tekstit, rivit);
     }
 
-    private void rivienLuku(ArrayList<String> tekstit, String tiedosto, String td) throws FileNotFoundException {
+    private void rivienLuku(ArrayList<String> tekstit, String tiedosto, String td) throws FileNotFoundException, IOException {
         String sisalto = "";
         for (String teksti : tekstit) {
             sisalto += teksti + "\n";
